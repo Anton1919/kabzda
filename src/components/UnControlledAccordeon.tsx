@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 import Star from "./Star";
-import AccordeonTitle from "./AccordeonTitle";
-import AccordeonBody from "./AccordeonBody";
+import AccordeonBody from "./Accordeon/AccordeonBody";
+import {Accordeon} from "./Accordeon/Accordeon";
+
 
 type UnAccPropsType = {
 	title: string
 	onClick: (value: number) => void
 	value: number
+	collapsed: boolean
 }
 
 const UnControlledAccordeon = (props: UnAccPropsType) => {
@@ -18,8 +20,8 @@ const UnControlledAccordeon = (props: UnAccPropsType) => {
 
 	return (
 		<div>
-			<AccordeonTitle title={props.title} onClick={() => setCollapsed(!collapsed)}/>
-			{!collapsed && <AccordeonBody/>}
+			<Accordeon title={props.title} collapsed={collapsed} onClick={() => setCollapsed(!collapsed)}/>
+			{/*{!collapsed && <AccordeonBody/>}*/}
 
 			<Star selected={props.value > 0} onClick={props.onClick} value={1}/>
 			<Star selected={props.value > 1} onClick={props.onClick} value={2}/>

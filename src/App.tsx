@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import OnOff from "./components/OnOff";
+import {OnOff} from "./components/OnOff/OnOff";
 import UnControlledAccordeon from "./components/UnControlledAccordeon";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <OnOff value={on} onChange={setOn}/>
       <OnOff value={on} onChange={setOn}/>
 
-      <UnControlledAccordeon value={value} onClick={setValue} title={'Menu'} />
+      <UnControlledAccordeon value={value} collapsed={true} onClick={setValue} title={'Menu'} />
     </div>
   );
 }

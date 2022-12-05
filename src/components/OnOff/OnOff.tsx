@@ -5,7 +5,7 @@ type OnOffPropsType = {
 	onChange: (on: boolean) => void
 }
 
-const OnOff = (props: OnOffPropsType) => {
+export const OnOff = (props: OnOffPropsType) => {
 	const onStyle = {
 		width: '30px',
 		height: '20px',
@@ -51,4 +51,3 @@ const OnOff = (props: OnOffPropsType) => {
 	);
 };
 
-export default OnOff;
