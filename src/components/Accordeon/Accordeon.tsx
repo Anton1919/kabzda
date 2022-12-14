@@ -5,7 +5,7 @@ import AccordeonBody from "./AccordeonBody";
 type PropsType = {
 	title: string
 	onClick: () => void
-	collapsed: boolean
+	collapsed?: boolean
 }
 
 export const Accordeon = (props: PropsType ) => {

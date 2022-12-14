@@ -3,7 +3,7 @@ import React from 'react';
 export type AccordeonPropsType = {
 	title: string
 	onClick: ()=> void
-	/*collapsed: boolean*/
+	collapsed?: boolean
 }
 
 const AccordeonTitle = (props: AccordeonPropsType) => {
