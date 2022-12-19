@@ -1,15 +1,18 @@
 import React from 'react';
+import {ItemType} from "./Accordeon";
 
-const AccordeonBody = () => {
+type PropsType = {
+	items: ItemType[]
+	onClick: (value: any) => void
+}
+
+const AccordeonBody = (props:PropsType) => {
 
 	return (
 		<ul>
-			<li>Contact</li>
-			<li>Setting</li>
-			<li>Refresh</li>
+			{props.items.map((i, index) => <li onClick={() => {props.onClick(i.value)}} key={index}>{i.title}</li> )}
 		</ul>
 	)
-
 };
 
 export default AccordeonBody;

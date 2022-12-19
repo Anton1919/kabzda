@@ -2,18 +2,25 @@ import React from 'react';
 import AccordeonTitle from "./AccordeonTitle";
 import AccordeonBody from "./AccordeonBody";
 
-type PropsType = {
+export type ItemType = {
 	title: string
-	onClick: () => void
+	value: number
+}
+
+export type PropsType = {
+	title: string
+	onChange: () => void
 	collapsed?: boolean
+	items: ItemType[]
+	onClick: (value: any) => void
 }
 
 export const Accordeon = (props: PropsType ) => {
 
 	return (
 		<div>
-			<AccordeonTitle title={props.title} onClick={props.onClick}/>
-			{!props.collapsed && <AccordeonBody/>}
+			<AccordeonTitle title={props.title} onChange={props.onChange}/>
+			{!props.collapsed && <AccordeonBody onClick={props.onClick} items={props.items}/>}
 		</div>
 	);
 };

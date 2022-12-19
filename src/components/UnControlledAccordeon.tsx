@@ -13,10 +13,7 @@ type UnAccPropsType = {
 
 const UnControlledAccordeon = (props: UnAccPropsType) => {
 
-
 	let [collapsed, setCollapsed] = useState(false)
-
-
 
 	return (
 		<div>
