@@ -5,8 +5,8 @@ import UnControlledAccordeon from "./components/UnControlledAccordeon";
 
 function App() {
 
-  let [value, setValue] = useState(0)
-  let [on, setOn] = useState(false)
+  const [value, setValue] = useState(0)
+  const [on, setOn] = useState(false)
 
   return (
     <div className="App">

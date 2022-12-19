@@ -20,7 +20,6 @@ export const Accordeon = (props: PropsType ) => {
 	return (
 		<div>
 			<AccordeonTitle title={props.title} onChange={props.onChange}/>
-			{!props.collapsed && <AccordeonBody onClick={props.onClick} items={props.items}/>}
 		</div>
 	);
 };
