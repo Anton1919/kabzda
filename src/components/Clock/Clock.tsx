@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import DigitalClock from "./DigitalClock";
 import AnalogClock from "./AnalogClock";
-import s from './View.module.css'
 
 type PropsType = {
 	mode: "digital" | "analog"

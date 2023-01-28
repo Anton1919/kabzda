@@ -18,8 +18,8 @@ function App() {
 			<UnControlledAccordeon value={value} collapsed={true} onClick={setValue} title={'Menu'}/>
 
 
-			<Clock mode={"analog"}/>
-			<Clock mode={"digital"}/>
+			{/*<Clock mode={"analog"}/>*/}
+			{/*<Clock mode={"digital"}/>*/}
 
 		</div>
 	);
