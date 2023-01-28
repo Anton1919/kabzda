@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 import {OnOff} from "./components/OnOff/OnOff";
 import UnControlledAccordeon from "./components/UnControlledAccordeon";
+import UseEffect from "./components/UseEffect/UseEffect";
+import Clock from "./components/Clock/Clock";
 
 function App() {
 
@@ -15,6 +17,8 @@ function App() {
       <OnOff value={on} onChange={setOn}/>
 
       <UnControlledAccordeon value={value} collapsed={true} onClick={setValue} title={'Menu'} />
+
+      <Clock/>
     </div>
   );
 }
